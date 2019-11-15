@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button">
+
+        <TextView
+            android:id="@+id/textView_car_loan"
+            style="@style/textTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_16"
+            android:text="@string/car_loan_text" />
+
+        <TextView
+            android:id="@+id/textViewCarLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_16"
+            android:paddingBottom="@dimen/padding_16"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="@dimen/result_textSize_24"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_interest"
+            style="@style/textTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:text="@string/interest_text" />
+
+        <TextView
+            android:id="@+id/textViewInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_16"
+            android:paddingBottom="@dimen/padding_16"
+            android:textSize="@dimen/result_textSize_24"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_month_repayment"
+            style="@style/textTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_16"
+            android:text="@string/month_repayment_text" />
+
+        <TextView
+            android:id="@+id/textViewMonthRepayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_16"
+            android:paddingBottom="@dimen/padding_16"
+            android:textSize="@dimen/result_textSize_24"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_car_price"
+        style="@style/textTheme"
+        android:layout_width="@dimen/text_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:fontFamily="@font/roboto"
+        android:text="@string/car_price_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_car_price"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_down_payment"
+        style="@style/textTheme"
+        android:layout_width="@dimen/text_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:text="@string/downpayment_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_down_payment"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_car_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:layout_marginTop="@dimen/layout_margin_28"
+        android:layout_marginEnd="@dimen/layout_margin_16"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_car_price"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_down_payment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:layout_marginTop="@dimen/layout_margin_16"
+        android:layout_marginEnd="@dimen/layout_margin_16"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_down_payment"
+        app:layout_constraintTop_toBottomOf="@+id/editText_car_price" />
+
+    <TextView
+        android:id="@+id/textView_loan_period"
+        style="@style/textTheme"
+        android:layout_width="@dimen/text_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:text="@string/loan_period_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_loan_period"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_loan_period"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:layout_marginTop="@dimen/layout_margin_16"
+        android:layout_marginEnd="@dimen/layout_margin_16"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_loan_period"
+        app:layout_constraintTop_toBottomOf="@+id/editText_down_payment" />
+
+    <TextView
+        android:id="@+id/textView_interest_rate"
+        style="@style/textTheme"
+        android:layout_width="@dimen/text_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:text="@string/interest_rate_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_interest_rate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_interest_rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:layout_marginTop="@dimen/layout_margin_16"
+        android:layout_marginEnd="@dimen/layout_margin_16"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_interest_rate"
+        app:layout_constraintTop_toBottomOf="@+id/editText_loan_period" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        style="@style/textTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_margin_16"
+        android:layout_marginTop="@dimen/layout_margin_28"
+        android:layout_marginEnd="@dimen/layout_margin_16"
+        android:background="@color/colorPrimary"
+        android:text="@string/calculate_button_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_interest_rate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
